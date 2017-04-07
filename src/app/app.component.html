@@ -1,0 +1,81 @@
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Angular 4 Scrolling Navigation Bar</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about" [watchScrollRegister]="{id: 'about', class: 'active-navlink'}">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services" [watchScrollRegister]="{id: 'services', class: 'active-navlink'}">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact" [watchScrollRegister]="{id: 'contact', class: 'active-navlink'}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="scroll-section intro-section" watchScroll="none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Scrolling Navigation</h1>
+                    <p>This makes use of Angular 4's <code>@angular/animation</code> to make the effect of animated navigation while scrolling.</p>
+                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-section about-section" watchScroll="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="scroll-section services-section" watchScroll="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Services Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-section contact-section" watchScroll="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>

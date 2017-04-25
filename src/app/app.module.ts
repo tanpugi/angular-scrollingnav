@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { EventsService } from './shared/events.service';
-import { WatchScrollDirective, WatchScrollRegisterDirective } from './shared/watchscroll.directive';
+import { EventRegisterService } from './services/event-register.service';
+import { WatchScrollDirective } from './directives/watchscroll.directive';
+import { WatchScrollRegisterDirective } from './directives/watchscroll-register.directive';
  
 @NgModule({
   declarations: [
@@ -17,11 +17,10 @@ import { WatchScrollDirective, WatchScrollRegisterDirective } from './shared/wat
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     HttpModule
   ],
-  providers: [EventsService],
+  providers: [EventRegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

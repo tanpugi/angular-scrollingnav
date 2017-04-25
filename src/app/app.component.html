@@ -1,5 +1,5 @@
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" [watchScrollRegister]="{item: 'nav', class: 'top-nav-collapse'}">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -12,20 +12,20 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" [watchScroll]="{item: 'nav', start: 50, stop: 50}">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#about" [watchScrollRegister]="{id: 'about', class: 'active-navlink'}">About</a>
+                    <li watchScrollRegister="about">
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#services" [watchScrollRegister]="{id: 'services', class: 'active-navlink'}">Services</a>
+                    <li watchScrollRegister="services">
+                        <a class="page-scroll" href="#services">Services</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact" [watchScrollRegister]="{id: 'contact', class: 'active-navlink'}">Contact</a>
+                    <li watchScrollRegister="contact">
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -35,7 +35,7 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="scroll-section intro-section" watchScroll="none">
+    <section id="intro" class="scroll-section intro-section" watchScroll="none:hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
